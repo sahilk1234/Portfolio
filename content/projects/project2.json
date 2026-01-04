@@ -1,0 +1,6 @@
+{
+  "priority": 3,
+  "title": "Movie Streaming Platform",
+  "shortDescription": "Implemented HLS adaptive streaming with a Next.js frontend and Node.js/Express backend. Added JWT auth, role-based access, watchlists, reviews, and automated thumbnail generation via FFmpeg.",
+  "type": "Personal"
+}

@@ -1,0 +1,7 @@
+{
+  "priority": 1,
+  "title": "Taco DB",
+  "shortDescription": "Built Taco-DB, a mini relational DBMS in C++17, implementing core components from storage through query execution.",
+  "type": "Academic",
+  "siteAge": "August 2025 - December 2025"
+}

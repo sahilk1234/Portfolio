@@ -1,0 +1,8 @@
+{
+  "priority": 4,
+  "title": "Image Caption Generation System",
+  "shortDescription": "Trained a VGG16 + RNN model on MS COCO to generate real-time image captions. Built a Next.js UI and Django API for inference.",
+  "type": "Personal",
+  "livePreview": "https://criminal-nessie-sahilk-556a89ae.koyeb.app",
+  "githubLink": "https://github.com/sahilk1234/Image_caption"
+}

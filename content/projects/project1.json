@@ -1,0 +1,7 @@
+{
+  "priority": 2,
+  "title": "Dentite",
+  "shortDescription": "Built a React Native app and Django backend to scan insurance cards and automate data extraction. Generated synthetic card images for OCR testing, evaluated LLMs, and integrated Claude Haiku for preprocessing to streamline claims processing.",
+  "type": "Industry",
+  "siteAge": "Jan 2025 - May 2025"
+}

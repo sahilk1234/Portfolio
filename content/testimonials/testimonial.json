@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Leonardo Jr Lothamer",
+    "title": "Scrum Master",
+    "feedback": "Sahil is a fast learner and is always willing to take a further step and help his peers. Working with him is an enriching experience as he learns from you while teaching you new things. His ability to adapt quickly to new technologies and his good communication skills are just the tip of an iceberg that makes Sahil a great professional.",
+    "createdAt": "2024-09-06"
+  },
+  {
+    "name": "Jefin Francis",
+    "title": "Senior Software Engineer",
+    "feedback": "I had the pleasure of interacting with him through various meetups and discussions, though we haven't directly worked on the same projects. We joined the company together and went through training together, which was always fun and engaging. I’ve consistently heard great things from his manager, and during our conversations, I was always impressed by his enthusiasm for exploring new technologies and his willingness to share insights about the latest innovations in his projects. He clearly has a keen interest in staying ahead with emerging trends, which I believe makes him a valuable asset to any team.",
+    "createdAt": "2024-09-06"
+  },
+  {
+    "name": "Julian Alberto Sotuyo",
+    "title": "Senior Frontend Developer",
+    "feedback": "During my time working with Sahil, he showed dedication, proactivity, and strong attention to detail. He always provided valuable input during our planning sessions, which greatly contributed to the project's success. Sahil's commitment and problem-solving abilities in both frontend and backend development made him an essential part of our team.",
+    "createdAt": "2024-08-25"
+  },
+  {
+    "name": "Bhushan Patil",
+    "title": "Solution Architect",
+    "feedback": "I had the pleasure of working with Sahil on a complex Commerce Tool project, and I can confidently say that he is an outstanding JavaScript developer. Sahil's deep understanding of JavaScript, combined with his ability to quickly grasp new technologies, made him an invaluable asset to our team. Sahil consistently delivered high-quality code and demonstrated exceptional problem-solving skills. Whether it was optimizing performance, implementing new features, or fixing tricky bugs, Sahil approached every task with a positive attitude and a strong attention to detail. His ability to collaborate effectively with cross-functional teams and his clear communication ensured that the project stayed on track and met all our deadlines.",
+    "createdAt": "2024-08-24"
+  },
+  {
+    "name": "Chetan Bhangale",
+    "title": "Technical Lead",
+    "feedback": "I had the pleasure of mentoring Sahil and working on various projects with him, and he is a standout software engineer. He consistently delivers top-quality work and is always eager to learn and improve. Sahil’s strong technical skills, problem-solving abilities, and teamwork make him a valuable asset to any team. I highly recommend him.",
+    "createdAt": "2024-08-24"
+  },
+  {
+    "name": "Leandro Souza",
+    "title": "Senior Project Manager",
+    "feedback": "Sahil worked with me as a Full Stack Developer on a recent project. During the time we worked together, he consistently demonstrated a high level of technical expertise and dedication, making great contributions to the project success. His ability to understand our technical challenges and articulate solutions helped drive the project's most important decisions. For the next projects, I have no doubt that Sahil will continue to excel in his career and bring value to any team he joins.",
+    "createdAt": "2024-08-04"
+  },
+  {
+    "name": "Fernando Henrique P. Cardozo",
+    "title": "Software Engineer",
+    "feedback": "Sahil is a very skilled professional and an excellent teammate. It was very constructive working with him for several months when I could check his good problem-solving skills both in frontend and backend.",
+    "createdAt": "2024-07-31"
+  },
+  {
+    "name": "Arpit Birla",
+    "title": "Software Engineer",
+    "feedback": "Having Sahil as a mentor and teammate has been incredibly enriching. His ability to see the big picture and navigate complex tasks with clarity and confidence is admirable. His sharp observation skills and insightful suggestions have consistently enhanced our work, making everything more effective and streamlined. His ability to provide valuable advice and guidance has significantly contributed to my professional growth.",
+    "createdAt": "2024-07-29"
+  },
+  {
+    "name": "Mayur Shetye",
+    "title": "Quality Engineering Leader",
+    "feedback": "Sahil is a quick learner and passionate about the work he is involved in. He played a perfect team member's role when we worked on a project together. I recommend his skills in front end technology.",
+    "createdAt": "2024-07-29"
+  }
+]

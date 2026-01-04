@@ -1,11 +1,11 @@
-import { FC, InputHTMLAttributes } from 'react'
+import { FC, InputHTMLAttributes } from "react";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  label?: string
-  id?: string
+  label?: string;
+  id?: string;
 }
 
-const Input: FC<InputProps> = ({ type = 'text', id, label, ...props }) => {
+const Input: FC<InputProps> = ({ type = "text", id, label, ...props }) => {
   return (
     <div className="mb-4 flex w-full flex-col gap-2">
       {label && (
@@ -20,7 +20,7 @@ const Input: FC<InputProps> = ({ type = 'text', id, label, ...props }) => {
         className="border-border focus:ring-accent text-neutral w-full rounded-lg border p-[10px] placeholder:font-thin focus:ring-2 focus:outline-none"
       />
     </div>
-  )
-}
+  );
+};
 
-export default Input
+export default Input;

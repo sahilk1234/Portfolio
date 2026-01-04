@@ -1,15 +1,15 @@
-'use client'
-import useRoleSwitcher from '@/hooks/useRoleSwitcher'
-import useRotatingAnimation from '@/hooks/useRotatingAnimation'
-import Image from 'next/image'
-import { HeroImage } from '../../utils/images'
-import Ellipse from './Ellipse'
+"use client";
+import useRoleSwitcher from "@/hooks/useRoleSwitcher";
+import useRotatingAnimation from "@/hooks/useRotatingAnimation";
+import Image from "next/image";
+import { HeroImage } from "../../utils/images";
+import Ellipse from "./Ellipse";
 
 const Hero = () => {
-  const ellipseRef = useRotatingAnimation()
+  const ellipseRef = useRotatingAnimation();
   const role = useRoleSwitcher({
-    roles: ['SOFTWARE ENGINEER', 'FULL-STACK DEVELOPER', 'M.S. CSE STUDENT'],
-  })
+    roles: ["SOFTWARE ENGINEER", "FULL-STACK DEVELOPER", "M.S. CSE STUDENT"],
+  });
 
   return (
     <section className="bg-primary bg-small-glow bg-small-glow-position md:bg-large-glow-position lg:bg-large-glow min-h-[calc(dvh-4rem)] bg-no-repeat">
@@ -17,26 +17,31 @@ const Hero = () => {
         <div className="flex min-h-48 flex-col justify-between lg:min-h-56 lg:max-w-[33.75rem]">
           <h1>
             <span className="text-neutral mb-2 block text-3xl font-bold">
-              Hi, I'm Sahil Khadtare
+              Hi, I&apos;m Sahil Khadtare
             </span>
-            <span className="text-accent block text-[1.75rem] font-bold">{role}</span>
+            <span className="text-accent block text-[1.75rem] font-bold">
+              {role}
+            </span>
           </h1>
 
           <h2 className="text-neutral mt-3">
-            Software engineer with 3 years of experience building scalable web and mobile products.
+            Software engineer with 3 years of experience building scalable web
+            and mobile products.
           </h2>
 
           <div className="mt-6 flex flex-wrap gap-6">
             <a
               href="#contact"
               aria-label="Contact Sahil"
-              className="bg-accent min-w-32 cursor-pointer rounded-lg px-[14px] py-[10px] text-center text-sm font-medium text-[#00071E]">
+              className="bg-accent min-w-32 cursor-pointer rounded-lg px-[14px] py-[10px] text-center text-sm font-medium text-[#00071E]"
+            >
               Contact
             </a>
             <a
               href="mailto:sahilkhadtare29@gmail.com"
               aria-label="Email Sahil"
-              className="text-neutral bg-secondary cursor-pointer rounded-lg px-[14px] py-[10px] text-sm">
+              className="text-neutral bg-secondary cursor-pointer rounded-lg px-[14px] py-[10px] text-sm"
+            >
               Email Me
             </a>
           </div>
@@ -60,7 +65,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

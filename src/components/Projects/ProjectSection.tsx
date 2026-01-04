@@ -1,9 +1,9 @@
-import { Project } from '@/lib/types'
-import SectionHeading from '../SectionHeading/SectionHeading'
-import ProjectCard from './ProjectCard'
+import { Project } from "@/lib/types";
+import SectionHeading from "../SectionHeading/SectionHeading";
+import ProjectCard from "./ProjectCard";
 
 interface ProjectSectionProps {
-  projects: Project[]
+  projects: Project[];
 }
 
 const ProjectSection: React.FC<ProjectSectionProps> = ({ projects }) => {
@@ -20,7 +20,7 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({ projects }) => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ProjectSection
+export default ProjectSection;

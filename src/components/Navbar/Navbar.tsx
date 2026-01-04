@@ -1,45 +1,45 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { useState } from 'react'
-import { BurgerIcon, CloseIcon } from '../../utils/icons'
-import Logo from './Logo'
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { BurgerIcon, CloseIcon } from "../../utils/icons";
+import Logo from "./Logo";
 
 const navItems = [
   {
-    label: '_home',
-    href: '/',
+    label: "_home",
+    href: "/",
   },
   {
-    label: '_skills',
-    href: '/#skills',
+    label: "_skills",
+    href: "/#skills",
   },
   {
-    label: '_projects',
-    href: '/#projects',
+    label: "_projects",
+    href: "/#projects",
   },
   {
-    label: '_expertise',
-    href: '/#expertise',
+    label: "_expertise",
+    href: "/#expertise",
   },
   {
-    label: '_experience',
-    href: '/#experience',
+    label: "_experience",
+    href: "/#experience",
   },
   {
-    label: '_contact-me',
-    href: '/#contact',
+    label: "_contact-me",
+    href: "/#contact",
   },
-]
+];
 
 const Navbar = () => {
-  const [isVisible, setIsVisible] = useState(false)
-  const pathname = usePathname()
+  const [isVisible, setIsVisible] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
-    setIsVisible(!isVisible)
-  }
+    setIsVisible(!isVisible);
+  };
 
   return (
     <nav className="bg-primary border-border h-16 overflow-hidden border-b">
@@ -66,15 +66,18 @@ const Navbar = () => {
         </div>
 
         <ul
-          className={`${isVisible ? 'flex' : 'hidden'} animate-fade-in bg-primary absolute top-16 left-0 z-10 h-dvh w-dvw flex-col md:static md:top-0 md:flex md:h-full md:w-[72%] md:flex-row lg:w-[70%]`}>
+          className={`${isVisible ? "flex" : "hidden"} animate-fade-in bg-primary absolute top-16 left-0 z-10 h-dvh w-dvw flex-col md:static md:top-0 md:flex md:h-full md:w-[72%] md:flex-row lg:w-[70%]`}
+        >
           {navItems.map(({ label, href }) => (
             <li
               key={href}
               onClick={() => setIsVisible(false)}
-              className="border-border flex items-center border-b px-4 text-2xl md:border-y-0 md:border-e md:text-base md:first:border-s md:last:ml-auto md:last:border-none md:last:px-0 lg:px-8">
+              className="border-border flex items-center border-b px-4 text-2xl md:border-y-0 md:border-e md:text-base md:first:border-s md:last:ml-auto md:last:border-none md:last:px-0 lg:px-8"
+            >
               <Link
                 href={href}
-                className={`text-primary-content hover:text-neutral w-full py-7 transition-all duration-150 md:py-0 ${pathname === href ? 'text-neutral cursor-text' : ''}`}>
+                className={`text-primary-content hover:text-neutral w-full py-7 transition-all duration-150 md:py-0 ${pathname === href ? "text-neutral cursor-text" : ""}`}
+              >
                 {label}
               </Link>
             </li>
@@ -82,7 +85,7 @@ const Navbar = () => {
         </ul>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

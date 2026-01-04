@@ -1,5 +1,5 @@
-import { footerLinks } from '@/appData'
-import Logo from '../Navbar/Logo'
+import { footerLinks } from "@/appData";
+import Logo from "../Navbar/Logo";
 
 const Footer = () => {
   return (
@@ -8,10 +8,13 @@ const Footer = () => {
         <div>
           <h5 className="mb-8 flex items-center gap-2">
             <Logo width={30} height={24} />
-            <span className="text-neutral text-lg font-medium">Sahil Khadtare</span>
+            <span className="text-neutral text-lg font-medium">
+              Sahil Khadtare
+            </span>
           </h5>
           <p className="text-tertiary-content">
-            Software engineer and M.S. CSE student focused on full-stack and mobile development.
+            Software engineer and M.S. CSE student focused on full-stack and
+            mobile development.
           </p>
         </div>
 
@@ -20,7 +23,8 @@ const Footer = () => {
             <a
               href={link.href}
               key={link.href}
-              className="text-tertiary-content hover:text-neutral transition-colors duration-300 hover:underline">
+              className="text-tertiary-content hover:text-neutral transition-colors duration-300 hover:underline"
+            >
               {link.title}.
             </a>
           ))}
@@ -33,17 +37,20 @@ const Footer = () => {
             <h5 className="text-neutral mb-4 text-lg font-medium">Contact</h5>
             <a
               href="mailto:sahilkhadtare29@gmail.com"
-              className="text-tertiary-content hover:text-neutral text-sm font-light transition-colors duration-300">
+              className="text-tertiary-content hover:text-neutral text-sm font-light transition-colors duration-300"
+            >
               sahilkhadtare29@gmail.com
             </a>
             <a
               href="mailto:skhadtar@buffalo.edu"
-              className="text-tertiary-content hover:text-neutral text-sm font-light transition-colors duration-300">
+              className="text-tertiary-content hover:text-neutral text-sm font-light transition-colors duration-300"
+            >
               skhadtar@buffalo.edu
             </a>
             <a
               href="tel:+17162923687"
-              className="text-tertiary-content hover:text-neutral text-sm font-light transition-colors duration-300">
+              className="text-tertiary-content hover:text-neutral text-sm font-light transition-colors duration-300"
+            >
               +1 (716) 292-3687
             </a>
           </div>
@@ -66,7 +73,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

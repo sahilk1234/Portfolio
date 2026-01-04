@@ -1,6 +1,6 @@
-import { serviceData } from '../../appData'
-import SectionHeading from '../SectionHeading/SectionHeading'
-import ServiceCard from './ServiceCard'
+import { serviceData } from "../../appData";
+import SectionHeading from "../SectionHeading/SectionHeading";
+import ServiceCard from "./ServiceCard";
 
 const ServiceSection = () => {
   return (
@@ -22,7 +22,7 @@ const ServiceSection = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ServiceSection
+export default ServiceSection;

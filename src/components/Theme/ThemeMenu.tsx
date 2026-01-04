@@ -1,35 +1,39 @@
-'use client'
+"use client";
 
-import { themes } from '@/appData'
-import useOutsideClick from '@/hooks/useOutsideClick'
-import { CheckIcon, CloseIcon } from '@/utils/icons'
-import { useEffect, useState } from 'react'
+import { themes } from "@/appData";
+import useOutsideClick from "@/hooks/useOutsideClick";
+import { CheckIcon, CloseIcon } from "@/utils/icons";
+import { useEffect, useState } from "react";
 
 const ThemeMenu = () => {
-  const [theme, setTheme] = useState('dark')
-  const [showThemeMenu, setShowThemeMenu] = useState(false)
-  const menuRef = useOutsideClick(() => setShowThemeMenu(false))
+  const [theme, setTheme] = useState("dark");
+  const [showThemeMenu, setShowThemeMenu] = useState(false);
+  const menuRef = useOutsideClick(() => setShowThemeMenu(false));
 
   useEffect(() => {
-    if (window) setTheme(localStorage.getItem('theme') ?? theme)
-  }, [])
+    if (window) setTheme(localStorage.getItem("theme") ?? theme);
+  }, []);
 
   useEffect(() => {
-    if (window) document.documentElement.setAttribute('data-theme', theme)
-  }, [theme])
+    if (window) document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
 
   const changeTheme = (theme: string) => {
     if (window) {
-      setTheme(theme)
-      localStorage.setItem('theme', theme)
+      setTheme(theme);
+      localStorage.setItem("theme", theme);
     }
-  }
+  };
 
   return (
-    <div ref={menuRef} className="fixed right-6 bottom-4 z-50 md:right-11 md:bottom-11">
+    <div
+      ref={menuRef}
+      className="fixed right-6 bottom-4 z-50 md:right-11 md:bottom-11"
+    >
       <div
         onClick={() => setShowThemeMenu(!showThemeMenu)}
-        className="bg-neutral cursor-pointer rounded-full p-1.5 md:p-2">
+        className="bg-neutral cursor-pointer rounded-full p-1.5 md:p-2"
+      >
         <div className="bg-primary grid grid-cols-2 place-content-center gap-0.5 rounded-full p-1.5 md:p-2">
           <div className="size-[7px] rounded-t-full rounded-bl-full bg-[#B13753] md:size-[10px]"></div>
           <div className="size-[7px] rounded-t-full rounded-br-full bg-[#BAA32B] md:size-[10px]"></div>
@@ -53,9 +57,12 @@ const ThemeMenu = () => {
               key={name}
               onClick={() => changeTheme(name.toLowerCase())}
               style={{ background: colors[0], color: colors[1] }}
-              className="flex min-w-48 cursor-pointer items-center justify-between rounded-lg p-2 md:min-w-60 md:rounded-xl md:p-4">
+              className="flex min-w-48 cursor-pointer items-center justify-between rounded-lg p-2 md:min-w-60 md:rounded-xl md:p-4"
+            >
               <div className="flex items-end gap-1.5">
-                <CheckIcon className={name.toLowerCase() === theme ? 'block' : 'hidden'} />
+                <CheckIcon
+                  className={name.toLowerCase() === theme ? "block" : "hidden"}
+                />
                 <span className="text-sm md:text-base">{name}</span>
               </div>
               <div className="flex items-center gap-1.5">
@@ -63,7 +70,8 @@ const ThemeMenu = () => {
                   <div
                     key={color + idx}
                     style={{ background: color }}
-                    className="size-2 rounded-full md:size-3"></div>
+                    className="size-2 rounded-full md:size-3"
+                  ></div>
                 ))}
               </div>
             </div>
@@ -71,7 +79,7 @@ const ThemeMenu = () => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default ThemeMenu
+export default ThemeMenu;

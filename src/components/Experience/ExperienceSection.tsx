@@ -8,7 +8,6 @@ const ExperienceSection = () => {
     <section id="experience" className="my-14">
       <SectionHeading
         title="// Experience"
-        subtitle="Roles and focus areas that reflect my end-to-end product work."
       />
 
       <div className="relative mt-8">

@@ -7,7 +7,6 @@ const ServiceSection = () => {
     <section id="expertise" className="my-14">
       <SectionHeading
         title="// Expertise"
-        subtitle="Focused on building reliable web, mobile, and backend systems end-to-end."
       />
 
       <div className="mt-8 grid grid-cols-1 gap-6 md:mt-12 md:grid-cols-2 lg:grid-cols-3">

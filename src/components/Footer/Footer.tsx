@@ -1,4 +1,5 @@
 import { footerLinks } from "@/appData";
+import { GithubIcon, LinkedIn } from "@/utils/icons";
 import Logo from "../Navbar/Logo";
 
 const Footer = () => {
@@ -59,6 +60,29 @@ const Footer = () => {
             <address className="text-tertiary-content flex flex-col text-sm font-light not-italic">
               <span>Buffalo, NY, USA</span>
             </address>
+          </div>
+          <div>
+            <h5 className="text-neutral mb-4 text-lg font-medium">Social</h5>
+            <div className="flex flex-col gap-2">
+              <a
+                href="https://github.com/sahilk1234"
+                target="_blank"
+                rel="noreferrer"
+                className="text-tertiary-content hover:text-neutral flex items-center gap-2 text-sm font-light transition-colors duration-300"
+              >
+                <GithubIcon className="size-4" />
+                <span>GitHub</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/sahil-khadtare-5442981b7/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-tertiary-content hover:text-neutral flex items-center gap-2 text-sm font-light transition-colors duration-300"
+              >
+                <LinkedIn className="size-4" />
+                <span>LinkedIn</span>
+              </a>
+            </div>
           </div>
         </div>
         <p className="text-tertiary-content flex flex-col self-end text-xs md:text-right">

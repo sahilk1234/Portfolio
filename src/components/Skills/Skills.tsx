@@ -16,7 +16,6 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
       <div className="mx-auto max-w-[1200px] px-4">
         <SectionHeading
           title="// Skills"
-          subtitle="Grouped by focus area so the full stack stays easy to scan."
         />
 
         <div className="relative mt-8">

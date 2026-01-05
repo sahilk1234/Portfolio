@@ -11,7 +11,6 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({ projects }) => {
     <section id="projects">
       <SectionHeading
         title="// Projects"
-        subtitle="Selected academic and industry projects highlighting full-stack and ML work."
       />
 
       <div className="my-8 grid grid-cols-1 gap-8 md:my-12 md:grid-cols-2">

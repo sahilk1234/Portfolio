@@ -1,6 +1,7 @@
 "use client";
 import useRoleSwitcher from "@/hooks/useRoleSwitcher";
 import useRotatingAnimation from "@/hooks/useRotatingAnimation";
+import { GithubIcon, LinkedIn } from "@/utils/icons";
 import Image from "next/image";
 import { HeroImage } from "../../utils/images";
 import Ellipse from "./Ellipse";
@@ -43,6 +44,29 @@ const Hero = () => {
               className="text-neutral bg-secondary cursor-pointer rounded-lg px-[14px] py-[10px] text-sm"
             >
               Email Me
+            </a>
+          </div>
+
+          <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">
+            <a
+              href="https://github.com/sahilk1234"
+              aria-label="Visit Sahil's GitHub profile"
+              target="_blank"
+              rel="noreferrer"
+              className="text-neutral bg-secondary border-border hover:text-accent flex items-center gap-2 rounded-lg border px-3 py-2 transition-colors duration-200"
+            >
+              <GithubIcon className="size-4" />
+              <span>GitHub</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sahil-khadtare-5442981b7/"
+              aria-label="Visit Sahil's LinkedIn profile"
+              target="_blank"
+              rel="noreferrer"
+              className="text-neutral bg-secondary border-border hover:text-accent flex items-center gap-2 rounded-lg border px-3 py-2 transition-colors duration-200"
+            >
+              <LinkedIn className="size-4" />
+              <span>LinkedIn</span>
             </a>
           </div>
         </div>

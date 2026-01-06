@@ -1,7 +1,7 @@
 {
   "priority": 1,
   "title": "Taco DB",
-  "shortDescription": "Built Taco-DB, a mini relational DBMS in C++17, implementing core components from storage through query execution.",
+  "shortDescription": "Designed and implemented a mini relational database system from scratch in C++, including buffer manager, page layout, and file manager for disk-based storage. Built a B+-Tree indexing layer with bulk-load, point/range queries, and iterators over custom varlen data pages. Implemented core query operators (scan, selection, projection, aggregation, index scan, joins, external sort) using an iterator-based execution model. Tuned page layout, index fill factor, and join/sort pipelines to satisfy strict performance and memory constraints on TPC-H–style workloads under an automated test harness.",
   "type": "Academic",
   "siteAge": "August 2025 - December 2025"
 }

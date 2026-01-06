@@ -28,7 +28,7 @@ const navItems = [
     href: "/#experience",
   },
   {
-    label: "_contact-me",
+    label: "_contact",
     href: "/#contact",
   },
 ];

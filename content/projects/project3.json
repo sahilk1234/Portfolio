@@ -1,7 +1,7 @@
 {
   "priority": 4,
   "title": "Image Caption Generation System",
-  "shortDescription": "Trained a VGG16 + RNN model on MS COCO to generate real-time image captions. Built a Next.js UI and Django API for inference.",
+  "shortDescription": "Built a full-stack image captioning web app that generates natural-language captions for uploaded images using a PyTorch model with a ResNet-101 CNN encoder and Transformer decoder trained on MS COCO. Served optimized TorchScript inference through a FastAPI backend and integrated a responsive Next.js (TypeScript) UI for image upload, caption viewing, and history browsing. Implemented secure authentication/authorization with JWT-based guest sessions (24-hour history) and account merge on sign-in, persisting images and captions via SQLModel with SQLite by default and Postgres support. Packaged the entire system for deployment using Docker behind Nginx with Supervisor to run the frontend, API, and optional Postgres together.",
   "type": "Personal",
   "livePreview": "https://criminal-nessie-sahilk-556a89ae.koyeb.app",
   "githubLink": "https://github.com/sahilk1234/Image_caption"

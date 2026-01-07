@@ -77,11 +77,22 @@ export const experienceData = [
   {
     label: "Experience",
     role: "Software Engineer Intern",
-    company: "EITACIES Inc.",
+    company: "EITACIES Inc. (Santa Clara, CA, USA)",
     period: "Jun 2025 - Aug 2025",
     highlights: [
       "Developed mobile and web UI components for the QikOffice app to improve cross-platform UX.",
       "Built Framework7 UI components for mobile and web experiences.",
+    ],
+  },
+  {
+    label: "Experience",
+    role: "Software Engineer Intern",
+    company: "Dentite (Buffalo, NY, USA)",
+    period: "Jan 2025 - May 2025",
+    highlights: [
+      "Generated synthetic insurance card datasets in Python to validate OCR robustness across blur, glare, low light, and noise.",
+      "Built a React Native (Expo) app and Django backend pipeline to capture cards and automate OCR plus post-processing for structured extraction.",
+      "Benchmarked LLM-based extraction approaches and selected the best method for downstream insurance claim workflows.",
     ],
   },
   {

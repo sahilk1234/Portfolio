@@ -3,5 +3,6 @@
   "title": "Movie Streaming Platform",
   "shortDescription": "Built an end-to-end video streaming platform featuring secure authentication, user profiles, and an admin CMS for uploading and managing content. Implemented automated FFmpeg pipelines to generate HLS renditions, thumbnails, and video metadata, enabling resilient playback with HLS (via hls.js) and MP4 fallback for broader device support. Designed a scalable backend using Next.js App Router with TypeScript, Prisma + PostgreSQL, and Zod-validated APIs, while using Zustand for lightweight client-side state management; containerized services with Docker and integrated MinIO/S3 for reliable object storage.",
   "type": "Personal",
-  "githubLink":"https://github.com/sahilk1234/video-streaming-app"
+  "githubLink": "https://github.com/sahilk1234/video-streaming-app",
+  "livePreview": "https://streamly.sahilkhadtare.com"
 }

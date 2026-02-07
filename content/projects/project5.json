@@ -1,7 +1,8 @@
 {
   "priority": 5,
   "title": "ReuseHub",
-  "shortDescription": "Designed and developed a community-driven waste exchange platform enabling local reuse of items through AI-powered matching, location-based discovery, and gamification. Implemented enterprise-grade authentication using Auth0, including social logins, passwordless magic links, MFA, secure JWT (RS256), and full user lifecycle management via Auth0 Management API. Built a modular monolith architecture using Domain-Driven Design and dependency injection, enabling pluggable providers for authentication, storage, AI services, and maps. Containerized the application using Docker and Docker Compose, integrating PostgreSQL (PostGIS) and Redis for scalable geospatial queries and caching.",
+  "shortDescription": "• React (Vite) + Express/TypeScript backend with Postgres + Redis, Auth0 (social+DB), JWT, rate limits, Helmet/CORS hardening. • Geo feed/search with PostGIS-ready queries, image uploads, and race-safe claim/pickup workflow via transactional repos. • Eco-points ledger (value object), achievements, leaderboard, and Points UI with live balances + recent transactions. • Pluggable adapters for storage (local/S3), AI tagging (OpenAI/TensorFlow stub), maps (Google Maps), notifications (SendGrid); Docker Compose dev/prod parity.",
+  "stack": ["React", "TypeScript", "Express", "PostgreSQL", "Redis", "Docker"],
   "type": "Personal",
   "githubLink": "https://github.com/sahilk1234/ReuseHub"
 }

@@ -29,6 +29,31 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "i.pravatar.cc",
       },
+      {
+        protocol: "https",
+        hostname: "upload.wikimedia.org",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "walchandsangli.ac.in",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "www.dentite.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.prod.website-files.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "www.eitacies.com",
+        pathname: "/**",
+      },
     ],
   },
 };

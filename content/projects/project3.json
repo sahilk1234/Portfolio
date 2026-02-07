@@ -1,7 +1,8 @@
 {
   "priority": 4,
   "title": "Image Caption Generation System",
-  "shortDescription": "Built a full-stack image captioning web app that generates natural-language captions for uploaded images using a PyTorch model with a ResNet-101 CNN encoder and Transformer decoder trained on MS COCO. Served optimized TorchScript inference through a FastAPI backend and integrated a responsive Next.js (TypeScript) UI for image upload, caption viewing, and history browsing. Implemented secure authentication/authorization with JWT-based guest sessions (24-hour history) and account merge on sign-in, persisting images and captions via SQLModel with SQLite by default and Postgres support. Packaged the entire system for deployment using Docker behind Nginx with Supervisor to run the frontend, API, and optional Postgres together.",
+  "shortDescription": "• Next.js + FastAPI + PyTorch Transformer (MS COCO) generating captions for uploads. • TorchScript inference served via FastAPI; responsive Next.js UI for upload, captions, and history. • Auth with JWT guest sessions + account merge; persisted via SQLModel (SQLite default, Postgres optional). • Dockerized stack behind Nginx; Supervisor manages services, Postgres optional.",
+  "stack": ["Next.js", "FastAPI", "PyTorch", "Python", "Docker", "Nginx"],
   "type": "Personal",
   "livePreview": "https://imagecaption.sahilkhadtare.com",
   "githubLink": "https://github.com/sahilk1234/Image_caption"

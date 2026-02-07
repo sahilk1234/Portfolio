@@ -8,7 +8,7 @@ interface ProjectSectionProps {
 
 const ProjectSection: React.FC<ProjectSectionProps> = ({ projects }) => {
   return (
-    <section id="projects">
+    <section id="projects" className="page-section">
       <SectionHeading
         title="// Projects"
       />

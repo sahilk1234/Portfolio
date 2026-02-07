@@ -1,7 +1,8 @@
 {
   "priority": 1,
   "title": "Taco DB",
-  "shortDescription": "Designed and implemented a mini relational database system from scratch in C++, including buffer manager, page layout, and file manager for disk-based storage. Built a B+-Tree indexing layer with bulk-load, point/range queries, and iterators over custom varlen data pages. Implemented core query operators (scan, selection, projection, aggregation, index scan, joins, external sort) using an iterator-based execution model. Tuned page layout, index fill factor, and join/sort pipelines to satisfy strict performance and memory constraints on TPC-H–style workloads under an automated test harness.",
+  "shortDescription": "• C++17, POSIX, Linux, GTest. Disk-backed RDBMS with slotted pages and buffer pool manager for high disk↔memory throughput. • Persistent B+ Tree index with bulk-load + range scans; searches cut from O(N) to O(log N). • Iterator engine with seq scans, selections, projections, aggregations, joins, external merge sort for data beyond RAM. • Tuned physical plans (Index-NLJ) for TPC-H workloads to reach sub-second execution under memory constraints.",
+  "stack": ["C++", "Linux"],
   "type": "Academic",
   "siteAge": "August 2025 - December 2025"
 }

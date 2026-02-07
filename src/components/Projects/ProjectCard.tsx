@@ -8,6 +8,7 @@ import {
   Star,
   Timer,
 } from "../../utils/icons";
+import TechBadge from "../UI/TechBadge";
 
 const IconText: React.FC<{ icon: string; text: string }> = ({ icon, text }) => (
   <li className="flex gap-2">
@@ -34,84 +35,121 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data }) => {
     siteAge,
     type,
     cover,
+    stack = [],
   } = data;
 
+  const bulletPoints = shortDescription
+    .split("•")
+    .map((item) => item.trim())
+    .filter(Boolean);
+
   return (
-    <div className="bg-secondary border-border flex flex-col justify-between rounded-[14px] border p-5">
-      <div className="flex items-start justify-between gap-2">
-        <div className="flex-1">
-          <div className="flex flex-col flex-wrap gap-3 sm:flex-row sm:items-center">
-            <h3 className="text-secondary-content text-lg font-medium md:font-semibold">
+    <article className="relative flex h-full flex-col gap-4 overflow-hidden rounded-3xl border border-border/70 bg-secondary/95 p-5 shadow-[0_22px_60px_-32px_rgba(0,0,0,0.75)] transition-all duration-200 hover:-translate-y-1 hover:border-accent/80 hover:shadow-[0_30px_70px_-36px_rgba(0,0,0,0.8)]">
+      <span className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-accent via-accent/60 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_15%,rgba(85,101,232,0.22),transparent_30%),radial-gradient(circle_at_85%_10%,rgba(24,242,229,0.18),transparent_28%),radial-gradient(circle_at_50%_80%,rgba(15,23,42,0.32),transparent_40%)]" />
+      <div className="pointer-events-none absolute inset-0 rounded-3xl border border-accent/8" />
+
+      {cover && (
+        <figure className="relative overflow-hidden rounded-2xl border border-border/70 bg-primary">
+          <Image
+            src={cover}
+            width={800}
+            height={320}
+            alt="Project Cover"
+            className="h-40 w-full object-cover"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/30 to-transparent" />
+        </figure>
+      )}
+
+      <header className="relative flex items-start justify-between gap-3">
+        <div className="flex flex-1 flex-col gap-2">
+          <div className="flex flex-wrap items-center gap-3">
+            <h3 className="text-secondary-content text-xl font-semibold md:text-2xl">
               {title}
             </h3>
             {type && (
-              <span
-                className={`h-7 w-fit rounded-md bg-[#FFFFFF1A] p-1 text-sm ${type === "New 🔥" ? "animate-blink text-tag" : "text-accent"} backdrop-blur-[80px]`}
-              >
+              <span className="rounded-lg border border-border/60 bg-primary/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-accent">
                 {type}
               </span>
             )}
           </div>
-          <ul className="mt-3 flex flex-col flex-wrap gap-2 sm:flex-row sm:gap-4">
+          <div className="flex flex-wrap items-center gap-2">
+            {siteAge && (
+              <span className="rounded-full bg-primary px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-tertiary-content">
+                {siteAge}
+              </span>
+            )}
             {(visitors || numberOfSales) && (
-              <IconText
-                text={(visitors || numberOfSales)?.toString() || ""}
-                icon={Likes}
-              />
+              <span className="text-neutral flex items-center gap-2 rounded-full border border-border/70 bg-primary/70 px-3 py-1 text-xs font-medium">
+                <Image src={Likes} alt="Users" className="size-4" />
+                <span>{(visitors || numberOfSales)?.toString()}</span>
+              </span>
             )}
-            {siteAge && <IconText text={siteAge} icon={Timer} />}
-            {earned && <IconText text={earned} icon={Earning} />}
+            {earned && (
+              <span className="text-neutral flex items-center gap-2 rounded-full border border-border/70 bg-primary/70 px-3 py-1 text-xs font-medium">
+                <Image src={Earning} alt="Earned" className="size-4" />
+                <span>{earned}</span>
+              </span>
+            )}
             {(ratings || githubStars) && (
-              <IconText
-                text={(ratings || githubStars)?.toString() || ""}
-                icon={Star}
-              />
+              <span className="text-neutral flex items-center gap-2 rounded-full border border-border/70 bg-primary/70 px-3 py-1 text-xs font-medium">
+                <Image src={Star} alt="Rating" className="size-4" />
+                <span>{(ratings || githubStars)?.toString()}</span>
+              </span>
             )}
-          </ul>
+          </div>
         </div>
-        {cover && (
-          <figure className="flex justify-end overflow-hidden">
-            <Image
-              src={cover}
-              width={150}
-              height={80}
-              alt="Project Cover"
-              className="h-[80px] w-[150px] rounded-md object-cover shadow-[0px_1.66px_3.74px_-1.25px_#18274B1F]"
-            />
-          </figure>
+      </header>
+
+      <div className="relative flex-1 overflow-hidden rounded-2xl border border-border/60 bg-primary/85 px-4 py-4 backdrop-blur-sm">
+        {bulletPoints.length > 1 ? (
+          <ul className="space-y-2 text-[15px] leading-7 text-primary-content/95 md:text-base">
+            {bulletPoints.map((point, idx) => (
+              <li key={idx} className="flex items-start gap-3">
+                <span className="mt-2 block h-2 w-2 rounded-full bg-accent" />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="text-[15px] leading-7 text-primary-content/95 md:text-base">
+            {shortDescription}
+          </p>
         )}
       </div>
 
-      <div>
-        <div className="bg-primary text-primary-content my-4 h-[100px] overflow-scroll rounded-2xl px-4 py-2">
-          <p className="text-[14px] font-normal md:text-base">
-            {shortDescription}
-          </p>
+      {stack.length > 0 && (
+        <div className="flex flex-wrap gap-2">
+          {stack.map((tech) => (
+            <TechBadge key={tech} label={tech} />
+          ))}
         </div>
-        <div className="flex gap-5">
-          {livePreview && (
-            <a
-              href={livePreview}
-              className="text-accent flex gap-2 text-sm underline underline-offset-[3px] transition-all duration-75 ease-linear hover:scale-105 md:text-base"
-              target="_blank"
-            >
-              <PreviewIcon className="h-auto w-[18px] md:w-5" />
-              <span>Live Preview</span>
-            </a>
-          )}
-          {githubLink && (
-            <a
-              href={githubLink}
-              className="text-accent flex gap-2 text-sm underline underline-offset-[3px] transition-all duration-75 ease-linear hover:scale-105 md:text-base"
-              target="_blank"
-            >
-              <GithubIcon className="w-[18px] md:w-5" />
-              <span>Github Link</span>
-            </a>
-          )}
-        </div>
-      </div>
-    </div>
+      )}
+
+      <footer className="relative flex flex-wrap items-center gap-3 text-sm md:text-base">
+        {livePreview && (
+          <a
+            href={livePreview}
+            className="text-accent flex items-center gap-2 rounded-full border border-accent/50 px-3 py-1.5 transition-all duration-150 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
+            target="_blank"
+          >
+            <PreviewIcon className="h-auto w-[18px] md:w-5" />
+            <span>Live Preview</span>
+          </a>
+        )}
+        {githubLink && (
+          <a
+            href={githubLink}
+            className="text-accent flex items-center gap-2 rounded-full border border-accent/50 px-3 py-1.5 transition-all duration-150 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
+            target="_blank"
+          >
+            <GithubIcon className="w-[18px] md:w-5" />
+            <span>GitHub</span>
+          </a>
+        )}
+      </footer>
+    </article>
   );
 };
 

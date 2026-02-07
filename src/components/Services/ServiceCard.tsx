@@ -1,4 +1,5 @@
 import Image from "next/image";
+import TechBadge from "../UI/TechBadge";
 
 interface ServiceCardTypes {
   icon: string;
@@ -32,12 +33,7 @@ const ServiceCard: React.FC<ServiceCardTypes> = ({
       {stack.length > 0 && (
         <div className="mt-auto flex flex-wrap gap-2">
           {stack.map((item) => (
-            <span
-              key={item}
-              className="bg-primary border-border text-primary-content rounded-full border px-3 py-1 text-xs font-medium"
-            >
-              {item}
-            </span>
+            <TechBadge key={item} label={item} />
           ))}
         </div>
       )}

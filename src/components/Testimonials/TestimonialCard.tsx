@@ -5,11 +5,13 @@ import Image from "next/image";
 import { FC, useEffect, useRef } from "react";
 
 interface TestimonialCardProps {
+  id: string;
   testimonial: Testimonial;
   handleActiveCard: () => void;
 }
 
 const TestimonialCard: FC<TestimonialCardProps> = ({
+  id,
   testimonial: { name, title, feedback, image },
   handleActiveCard,
 }) => {
@@ -35,6 +37,7 @@ const TestimonialCard: FC<TestimonialCardProps> = ({
 
   return (
     <div
+      id={id}
       ref={cardRef}
       className="bg-secondary border-border flex h-[360px] w-[320px] shrink-0 flex-col gap-4 rounded-2xl border p-5 sm:h-[380px] sm:w-[360px]"
     >
@@ -43,7 +46,7 @@ const TestimonialCard: FC<TestimonialCardProps> = ({
         <span>LinkedIn Recommendation</span>
       </div>
       <div className="min-h-0 flex-1 overflow-y-auto pr-2">
-        <p className="text-neutral text-sm leading-7 before:content-['“'] after:content-['”']">
+        <p className="text-neutral text-base leading-7 before:content-['“'] after:content-['”']">
           {feedback}
         </p>
       </div>
@@ -57,13 +60,13 @@ const TestimonialCard: FC<TestimonialCardProps> = ({
             className="size-12 rounded-full"
           />
         ) : (
-          <div className="bg-primary text-primary-content flex size-12 items-center justify-center rounded-full text-sm font-semibold">
+          <div className="bg-primary text-primary-content flex size-12 items-center justify-center rounded-full text-base font-semibold">
             {initials}
           </div>
         )}
         <div>
           <p className="text-neutral font-semibold">{name}</p>
-          {title && <p className="text-tertiary-content text-sm">{title}</p>}
+          {title && <p className="text-tertiary-content text-base">{title}</p>}
         </div>
       </div>
     </div>

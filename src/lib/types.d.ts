@@ -3,6 +3,7 @@ export interface Project {
   shortDescription: string;
   priority: number;
   cover: string;
+  stack?: string[];
   livePreview?: string;
   githubLink?: string;
   visitors?: string;

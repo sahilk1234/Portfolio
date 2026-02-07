@@ -1,4 +1,5 @@
 import { Heading } from "@/lib/types";
+import { logger } from "./logger";
 
 export function formatDate(dateString: string): string {
   const date = new Date(dateString);
@@ -62,7 +63,7 @@ export function isInViewport(
       const [entry] = entries;
 
       if (entry.isIntersecting) {
-        console.log("Element has entered the viewport");
+        logger.debug("Element entered viewport");
         callback();
       }
     },

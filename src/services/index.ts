@@ -1,4 +1,5 @@
 import { Project, Testimonial } from "@/lib/types";
+import { logger } from "@/utils/logger";
 import { promises as fs } from "fs";
 import path from "path";
 
@@ -28,7 +29,7 @@ const getAllProjects = async (): Promise<Project[]> => {
     return projects;
   } catch (error) {
     // Handle errors
-    console.error("Error:", error);
+    logger.error("Failed to load projects", error);
     return [];
   }
 };
@@ -51,7 +52,7 @@ const getAllTestimonials = async (): Promise<Testimonial[]> => {
 
     return testimonials;
   } catch (error) {
-    console.error("Error:", error);
+    logger.error("Failed to load testimonials", error);
     return [];
   }
 };

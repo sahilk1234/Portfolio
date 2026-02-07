@@ -1,7 +1,7 @@
 "use client";
 import useRoleSwitcher from "@/hooks/useRoleSwitcher";
 import useRotatingAnimation from "@/hooks/useRotatingAnimation";
-import { GithubIcon, LinkedIn } from "@/utils/icons";
+import { GithubIcon, GmailIcon, LinkedIn } from "@/utils/icons";
 import Image from "next/image";
 import { HeroImage } from "../../utils/images";
 import Ellipse from "./Ellipse";
@@ -13,7 +13,7 @@ const Hero = () => {
   });
 
   return (
-    <section className="bg-primary bg-small-glow bg-small-glow-position md:bg-large-glow-position lg:bg-large-glow min-h-[calc(dvh-4rem)] bg-no-repeat">
+    <section className="page-section bg-primary bg-small-glow bg-small-glow-position md:bg-large-glow-position lg:bg-large-glow min-h-[calc(dvh-4rem)] bg-no-repeat">
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-4 px-4 pt-12 pb-10 md:grid-cols-2 lg:p-4">
         <div className="flex min-h-48 flex-col justify-between lg:min-h-56 lg:max-w-[33.75rem]">
           <h1>
@@ -41,8 +41,9 @@ const Hero = () => {
             <a
               href="mailto:sahilkhadtare29@gmail.com"
               aria-label="Email Sahil"
-              className="text-neutral bg-secondary cursor-pointer rounded-lg px-[14px] py-[10px] text-sm"
+              className="text-neutral bg-secondary cursor-pointer rounded-lg px-[14px] py-[10px] text-sm inline-flex items-center gap-2"
             >
+              <GmailIcon className="size-4" />
               Email Me
             </a>
           </div>
@@ -55,7 +56,7 @@ const Hero = () => {
               rel="noreferrer"
               className="text-neutral bg-secondary border-border hover:text-accent flex items-center gap-2 rounded-lg border px-3 py-2 transition-colors duration-200"
             >
-              <GithubIcon className="size-4" />
+              <GithubIcon className="size-4 text-[#181717] dark:text-white" />
               <span>GitHub</span>
             </a>
             <a
@@ -65,7 +66,7 @@ const Hero = () => {
               rel="noreferrer"
               className="text-neutral bg-secondary border-border hover:text-accent flex items-center gap-2 rounded-lg border px-3 py-2 transition-colors duration-200"
             >
-              <LinkedIn className="size-4" />
+              <LinkedIn className="size-4 text-[#0A66C2]" />
               <span>LinkedIn</span>
             </a>
           </div>

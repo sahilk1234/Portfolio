@@ -78,7 +78,11 @@ export const experienceData = [
     label: "Experience",
     role: "Software Engineer Intern",
     company: "EITACIES Inc. (Santa Clara, CA, USA)",
+    website: "https://www.eitacies.com/",
+    logo: "https://www.eitacies.com/assets/img/home/logo-blue.svg",
     period: "Jun 2025 - Aug 2025",
+    location: "Santa Clara, CA, USA",
+    locationUrl: "https://www.google.com/maps?q=Santa+Clara,+CA",
     highlights: [
       "Developed mobile and web UI components for the QikOffice app to improve cross-platform UX.",
       "Built Framework7 UI components for mobile and web experiences.",
@@ -88,7 +92,11 @@ export const experienceData = [
     label: "Experience",
     role: "Software Engineer Intern",
     company: "Dentite (Buffalo, NY, USA)",
+    website: "https://www.dentite.com/",
+    logo: "https://www.dentite.com/assets/img/dentite-logo.jpg",
     period: "Jan 2025 - May 2025",
+    location: "Buffalo, NY, USA",
+    locationUrl: "https://www.google.com/maps?q=Buffalo,+NY",
     highlights: [
       "Generated synthetic insurance card datasets in Python to validate OCR robustness across blur, glare, low light, and noise.",
       "Built a React Native (Expo) app and Django backend pipeline to capture cards and automate OCR plus post-processing for structured extraction.",
@@ -98,8 +106,12 @@ export const experienceData = [
   {
     label: "Experience",
     role: "Software Engineer",
-    company: "Object Edge India Services Pvt Ltd (Mahape, India)",
+    company: "Object Edge",
+    website: "https://www.objectedge.com/",
+    logo: "https://cdn.prod.website-files.com/5c6acd483ca6bdd37537fd4c/62e256e8bdc1fb0c6d156f57_Header%20logo%402x.webp",
     period: "Jan 2024 - Jul 2024",
+    location: "Mahape, Mumbai, India",
+    locationUrl: "https://www.google.com/maps?q=Mahape,+Maharashtra",
     highlights: [
       "Led backend development of a 360 Performance Review system, reducing processing time by 40%.",
       "Built scalable APIs for the 360 Performance project, improving data retrieval by 30% with NestJS and PostgreSQL.",
@@ -111,8 +123,12 @@ export const experienceData = [
   {
     label: "Experience",
     role: "Junior Software Engineer",
-    company: "Object Edge India Services Pvt Ltd",
+    company: "Object Edge",
+    website: "https://www.objectedge.com/",
+    logo: "https://cdn.prod.website-files.com/5c6acd483ca6bdd37537fd4c/62e256e8bdc1fb0c6d156f57_Header%20logo%402x.webp",
     period: "Aug 2022 - Dec 2023",
+    location: "Mahape, Mumbai, India",
+    locationUrl: "https://www.google.com/maps?q=Mahape,+Maharashtra",
     highlights: [
       "Developed microservices and storefront features for Beachbody and Launchpad initiatives.",
       "Built backend microservices for the Beachbody project, cutting response time by 15%.",
@@ -125,14 +141,37 @@ export const experienceData = [
   {
     label: "Experience",
     role: "Trainee Software Engineer",
-    company: "Object Edge India Services Pvt Ltd",
+    company: "Object Edge",
+    website: "https://www.objectedge.com/",
+    logo: "https://cdn.prod.website-files.com/5c6acd483ca6bdd37537fd4c/62e256e8bdc1fb0c6d156f57_Header%20logo%402x.webp",
     period: "Aug 2021 - Jul 2022",
+    location: "Mahape, Mumbai, India",
+    locationUrl: "https://www.google.com/maps?q=Mahape,+Maharashtra",
     highlights: [
       "Migrated legacy CMS-based websites to modern Gatsby-based static sites for improved performance and SEO.",
       "Analyzed client requirements and implemented frontend solutions and backend microservices using GraphQL.",
       "Boosted SEO by 30% and improved page load time by 25% using Gatsby.",
       "Integrated Contentful CMS to improve page configurability and reduce content update time by 30%.",
     ],
+  },
+];
+
+export const educationData = [
+  {
+    school: "University at Buffalo (SUNY)",
+    degree: "Master of Science, Computer Science & Engineering",
+    period: "Aug 2024 – Dec 2025",
+    location: "Buffalo, NY, USA",
+    website: "https://www.buffalo.edu/",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/3/33/University_at_Buffalo_logo.svg",
+  },
+  {
+    school: "Walchand College of Engineering",
+    degree: "Bachelor of Technology, Information Technology",
+    period: "Jul 2016 – Oct 2020",
+    location: "Sangli, India",
+    website: "https://www.walchandsangli.ac.in/",
+    logo: "https://walchandsangli.ac.in/wp-content/uploads/fevicon.png",
   },
 ];
 

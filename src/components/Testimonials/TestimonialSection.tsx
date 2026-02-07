@@ -16,14 +16,14 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
   const [activeCard, setActiveCard] = useState(0);
 
   return (
-    <section id="testimonials">
+    <section id="testimonials" className="page-section">
       <SectionHeading title="// LinkedIn Recommendations" />
       <div className="mt-4">
         <a
           href="https://www.linkedin.com/in/sahil-khadtare-5442981b7/#recommendations"
           target="_blank"
           rel="noreferrer"
-          className="text-accent inline-flex items-center gap-2 text-sm underline underline-offset-4 transition-opacity hover:opacity-80"
+          className="text-accent inline-flex items-center gap-2 text-base underline underline-offset-4 transition-opacity hover:opacity-80"
         >
           <LinkedIn className="size-4" />
           <span>View on LinkedIn</span>
@@ -34,6 +34,7 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
         {testimonials.map((testimonial, idx) => (
           <TestimonialCard
             key={idx}
+            id={`testimonial-${idx}`}
             testimonial={testimonial}
             handleActiveCard={() => {
               setActiveCard(idx);
@@ -42,11 +43,23 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
         ))}
       </div>
 
-      <div className="flex items-center justify-center gap-1 sm:hidden">
+      <div className="flex items-center justify-center gap-2">
         {testimonials.map((_, idx) => (
-          <div
+          <button
+            type="button"
             key={idx}
-            className={`${idx === activeCard ? "bg-accent size-[12px]" : "size-[10px] bg-white/50"} rounded-full`}
+            aria-label={`Go to testimonial ${idx + 1}`}
+            onClick={() => {
+              setActiveCard(idx);
+              document
+                .getElementById(`testimonial-${idx}`)
+                ?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+            }}
+            className={`transition-all ${
+              idx === activeCard
+                ? "bg-accent size-3.5"
+                : "bg-white/50 size-2.5 hover:bg-accent/60"
+            } rounded-full`}
           />
         ))}
       </div>

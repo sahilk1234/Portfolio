@@ -4,7 +4,7 @@ import ServiceCard from "./ServiceCard";
 
 const ServiceSection = () => {
   return (
-    <section id="expertise" className="my-14">
+    <section id="expertise" className="page-section">
       <SectionHeading
         title="// Expertise"
       />

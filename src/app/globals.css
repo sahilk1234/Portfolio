@@ -1,16 +1,17 @@
+@import "devicon/devicon.min.css";
 @import "tailwindcss";
 
 [data-theme="light"] {
-  --p: #fff;
-  --pc: #0d1a3b;
-  --s: #edeaf4;
-  --sc: #0d1a3b;
-  --tc: #6b7c93;
-  --a: #5565e8;
-  --n: #0d1a3b;
+  --p: #f8fafc;
+  --pc: #2c3446;
+  --s: #f1f5f9;
+  --sc: #2c3446;
+  --tc: #6f7688;
+  --a: #5f78d4;
+  --n: #2c3446;
 
-  --b: #dfdcdc;
-  --marquee: #dbe3f7;
+  --b: #e5e7eb;
+  --marquee: #eef2f6;
 
   /* for logo */
   --gradient-start: #5565e8;
@@ -20,10 +21,10 @@
 
 [data-theme="dark"] {
   --p: #011627;
-  --pc: #607b96;
+  --pc: #edf2ff;
   --s: #011221;
   --sc: #5565e8;
-  --tc: #99a1af;
+  --tc: #d0d7e4;
   --a: #18f2e5;
   --n: #fff;
 
@@ -176,7 +177,20 @@ h3 {
 }
 
 section {
-  scroll-margin-top: 1.5rem;
+  scroll-margin-top: 6rem;
+}
+
+.page-section {
+  min-height: auto;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .page-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 }
 
 /* Safari-only */

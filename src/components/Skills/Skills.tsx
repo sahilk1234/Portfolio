@@ -1,4 +1,5 @@
 import { ChevronRightIcon } from "@/utils/icons";
+import TechBadge from "../UI/TechBadge";
 import SectionHeading from "../SectionHeading/SectionHeading";
 
 type SkillGroup = {
@@ -12,7 +13,7 @@ type SkillsProps = {
 
 const Skills: React.FC<SkillsProps> = ({ skills }) => {
   return (
-    <section id="skills" className="my-14">
+    <section id="skills" className="page-section">
       <div className="mx-auto max-w-[1200px] px-4">
         <SectionHeading
           title="// Skills"
@@ -47,12 +48,7 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
 
                 <div className="mt-4 flex flex-wrap gap-2 font-inter">
                   {group.items.map((item) => (
-                    <span
-                      key={item}
-                      className="bg-primary border-border text-primary-content rounded-full border px-3 py-1 text-xs font-medium tracking-wide transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:text-accent hover:shadow-[0_8px_16px_-12px_rgba(0,0,0,0.65)] sm:text-sm"
-                    >
-                      {item}
-                    </span>
+                    <TechBadge key={item} label={item} />
                   ))}
                 </div>
               </details>

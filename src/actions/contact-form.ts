@@ -1,6 +1,7 @@
 "use server";
 
 import { Resend } from "resend";
+import { logger } from "@/utils/logger";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -34,7 +35,7 @@ export default async function action(prevState: any, formData: FormData) {
 
     return { success: true, message: "Thanks! Your message has been sent." };
   } catch (err) {
-    console.error(err);
+    logger.error("Contact form failed to send", err);
     return {
       success: false,
       message: "Failed to send. Please try again later.",

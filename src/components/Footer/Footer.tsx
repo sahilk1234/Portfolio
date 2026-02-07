@@ -1,15 +1,18 @@
 import { footerLinks } from "@/appData";
-import { GithubIcon, LinkedIn } from "@/utils/icons";
+import { GithubIcon, GmailIcon, LinkedIn, PhoneIcon } from "@/utils/icons";
 import Logo from "../Navbar/Logo";
 
 const Footer = () => {
   return (
     <footer className="bg-secondary relative flex min-h-[560px] flex-col justify-between gap-20 overflow-hidden px-4 py-14 md:p-14">
+      <div className="absolute inset-x-0 top-0 z-10 h-1 bg-gradient-to-r from-accent via-blue-400 to-purple-500" />
       <div className="relative z-20 grid grid-cols-1 items-start gap-20 md:grid-cols-2 md:gap-12">
         <div>
-          <h5 className="mb-8 flex items-center gap-2">
-            <Logo width={30} height={24} />
-            <span className="text-neutral text-lg font-medium">
+          <h5 className="mb-8 flex items-center gap-3">
+            <span className="inline-flex items-center justify-center rounded-xl bg-primary p-2 shadow-[0_8px_24px_-12px_rgba(0,0,0,0.35)]">
+              <Logo width={30} height={24} />
+            </span>
+            <span className="text-neutral text-lg font-semibold">
               Sahil Khadtare
             </span>
           </h5>
@@ -38,20 +41,23 @@ const Footer = () => {
             <h5 className="text-neutral mb-4 text-lg font-medium">Contact</h5>
             <a
               href="mailto:sahilkhadtare29@gmail.com"
-              className="text-tertiary-content hover:text-neutral text-sm font-light transition-colors duration-300"
+              className="text-tertiary-content hover:text-neutral flex items-center gap-2 text-sm font-light transition-colors duration-300"
             >
+              <GmailIcon className="size-4" />
               sahilkhadtare29@gmail.com
             </a>
             <a
               href="mailto:skhadtar@buffalo.edu"
-              className="text-tertiary-content hover:text-neutral text-sm font-light transition-colors duration-300"
+              className="text-tertiary-content hover:text-neutral flex items-center gap-2 text-sm font-light transition-colors duration-300"
             >
+              <GmailIcon className="size-4" />
               skhadtar@buffalo.edu
             </a>
             <a
               href="tel:+17162923687"
-              className="text-tertiary-content hover:text-neutral text-sm font-light transition-colors duration-300"
+              className="text-tertiary-content hover:text-neutral flex items-center gap-2 text-sm font-light transition-colors duration-300"
             >
+              <PhoneIcon className="size-4 text-accent" />
               +1 (716) 292-3687
             </a>
           </div>
@@ -70,7 +76,9 @@ const Footer = () => {
                 rel="noreferrer"
                 className="text-tertiary-content hover:text-neutral flex items-center gap-2 text-sm font-light transition-colors duration-300"
               >
-                <GithubIcon className="size-4" />
+                <span className="flex size-8 items-center justify-center rounded-full bg-white text-[#181717] shadow-[0_8px_18px_-12px_rgba(0,0,0,0.45)]">
+                  <GithubIcon className="size-4" />
+                </span>
                 <span>GitHub</span>
               </a>
               <a
@@ -79,7 +87,9 @@ const Footer = () => {
                 rel="noreferrer"
                 className="text-tertiary-content hover:text-neutral flex items-center gap-2 text-sm font-light transition-colors duration-300"
               >
-                <LinkedIn className="size-4" />
+                <span className="flex size-8 items-center justify-center rounded-full bg-[#0A66C2]/10 text-[#0A66C2] shadow-[0_8px_18px_-12px_rgba(10,102,194,0.55)]">
+                  <LinkedIn className="size-4" />
+                </span>
                 <span>LinkedIn</span>
               </a>
             </div>

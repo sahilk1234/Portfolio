@@ -1,0 +1,6 @@
+<svg width="160" height="60" viewBox="0 0 160 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="160" height="60" rx="12" fill="#0B1224"/>
+  <rect x="4" y="4" width="152" height="52" rx="10" fill="#111B34"/>
+  <text x="20" y="38" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#18F2E5">Object</text>
+  <text x="85" y="38" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#5565E8">Edge</text>
+</svg>
